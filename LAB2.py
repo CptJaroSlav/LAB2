@@ -233,9 +233,41 @@ plt.show()
 
 ###3###
 print('###3###')
+s = (3,2)
+X1 = np.zeros(s)
+X2 = np.linspace(1,5, num=5)
+X3 = np.linspace(5,1, num=5)
+X4 = np.full((2,3),2)
+X5 = np.full((5,1),10)
+X6 = np.linspace(-90,-70, num=3)
 
-A =np.block([[np.arange(1,6)], np.block([np.arange(6,1)])])
+Y1 = np.block([
+    [X2],
+    [X3]
+])
+Y2 = np.block([
+    [X4],
+    [X6]
+])
+Y3 = np.block([
+    [X1,Y2]
+])
+Y4 = np.block([
+    [Y1],
+    [Y3]
+])
+
+A = np.block([
+    [Y4,X5]
+])
 print(A)
 
+###4###
+print('###4###')
+B = np.array(A[2,:]+A[4,:])
+print(B)
 
-
+###5###
+print('###5###')
+C = np.array(A.max())
+print(C)
