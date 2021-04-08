@@ -264,10 +264,24 @@ print(A)
 
 ###4###
 print('###4###')
-B = np.array(A[2,:]+A[4,:])
+B = np.array(A[1,:]+A[3,:])
 print(B)
 
 ###5###
 print('###5###')
-C = np.array(A.max())
+C = A.max(axis=0)
 print(C)
+
+###6###
+print('###6###')
+D = np.delete(B,[0,5])
+print(D)
+
+###7###
+print('###7###')
+D[D==4]=0
+print(D)
+
+###8###
+print('###8###')
+E = np.delete(C.max)
