@@ -274,7 +274,7 @@ print(C)
 
 ###6###
 print('###6###')
-D = np.delete(B,[0,5])
+D = np.delete(B,[0,len(B)-1])
 print(D)
 
 ###7###
@@ -284,4 +284,5 @@ print(D)
 
 ###8###
 print('###8###')
-E = np.delete(C.max)
+E = np.delete(C,[C.max,C.min])
+print(E)
