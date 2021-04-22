@@ -12,7 +12,7 @@ print(A)
 A1 = np.array([[1, 2, 3],
 [7, 8, 9]])
 print(A1)
-A2 = np.array([[1, 2, \
+A2 = np.array([[1, 2,
 3],
 [7, 8, 9]])
 print(A2)
@@ -284,5 +284,48 @@ print(D)
 
 ###8###
 print('###8###')
-E = np.delete(C,[C.max,C.min])
+MAX_INDEX = np.argmax(C)
+MIN_INDEX = np.argmin(C)
+E1 = np.delete(C,MAX_INDEX)
+E = np.delete(E1,MIN_INDEX)
+print(C)
 print(E)
+
+###9###
+print('###9###')
+print(A)
+A_max = A.max()
+print(A_max)
+#print(A_min)
+
+###10###
+print('###10###')
+print('Tablicowe')
+Tablicowo = D*E
+print(Tablicowo)
+print('Macierzowe')
+Macierzowe = D@E
+print(Macierzowe)
+
+###11###
+print('###11###')
+
+def Funkcja(n):
+
+    ARRAY = np.random.randint(10, size=(n, n))
+    SLAD = np.trace(ARRAY)
+    return (ARRAY,SLAD)
+
+MACIERZ, SLAD = Funkcja(5)
+print(MACIERZ)
+print(SLAD)
+
+###12###
+print('###12###')
+
+def Funkcja2 (n):
+
+    ARRAY = np.random.randint(10,size=(n, n))
+    return (ARRAY)
+
+print(Funkcja2(6))
